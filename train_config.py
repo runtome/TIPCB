@@ -7,7 +7,7 @@ def parse_args():
     #dataset_Directory
     #CUHK-PEDES
     parser.add_argument('--dir', type=str,
-                        default=r'/content/superAI/imgs',
+                        default=r'/content/datasets',
                         help='directory to store dataset')
     parser.add_argument('--dataset', type=str,
                         default="CUHKPEDES")
