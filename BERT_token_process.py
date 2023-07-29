@@ -53,7 +53,7 @@ class CUHKPEDES_BERT_token(data.Dataset):
         if self.split == 'train':
             self.pklname = self.pklname_list[0]
 
-            with open(os.path.join("/content/TIPCB/data", self.pklname), 'rb') as f_pkl:
+            with open(os.path.join("/content/TIPCB/data/BERT_encode", self.pklname), 'rb') as f_pkl:
                 data = pickle.load(f_pkl)
                 self.train_labels = [int(i)-1 for i in data['labels']]
                 self.train_captions = data['caption_id']
@@ -65,7 +65,7 @@ class CUHKPEDES_BERT_token(data.Dataset):
 
         elif self.split == 'val':
             self.pklname = self.pklname_list[1]
-            with open(os.path.join("/content/TIPCB/data", self.pklname), 'rb') as f_pkl:
+            with open(os.path.join("/content/TIPCB/data/BERT_encode", self.pklname), 'rb') as f_pkl:
                 data = pickle.load(f_pkl)
                 self.val_labels = [int(i) - 11004 for i in data['labels']]
                 self.val_captions = data['caption_id']
@@ -77,7 +77,7 @@ class CUHKPEDES_BERT_token(data.Dataset):
         elif self.split == 'test':
             self.pklname = self.pklname_list[2]
 
-            with open(os.path.join("/content/TIPCB/data", self.pklname), 'rb') as f_pkl:
+            with open(os.path.join("/content/TIPCB/data/BERT_encode", self.pklname), 'rb') as f_pkl:
                 data = pickle.load(f_pkl)
                 self.test_labels = [int(i) -12004 for i in data['labels']]
                 self.test_captions = data['caption_id']
