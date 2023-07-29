@@ -93,7 +93,7 @@ def start_test():
 
     # set gpu ids
     if len(gpu_ids) > 0:
-        torch.cuda.set_device(gpu_ids[0])
+        torch.cuda.set_device('cuda:0')
         cudnn.benchmark = True
     with open('%s/opts_test.yaml' % args.log_test_dir, 'w') as fp:
         yaml.dump(vars(args), fp, default_flow_style=False)
@@ -117,7 +117,7 @@ if __name__ == '__main__':
 
     # set gpu ids
     if len(gpu_ids) > 0:
-        torch.cuda.set_device(gpu_ids[0])
+        torch.cuda.set_device('cuda:0')
         cudnn.benchmark = True
     with open('%s/opts_test.yaml' % args.log_test_dir, 'w') as fp:
         yaml.dump(vars(args), fp, default_flow_style=False)
