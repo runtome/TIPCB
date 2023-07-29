@@ -5,11 +5,11 @@ import numpy as np
 
 
 # torch.cuda.set_device(0)
-txt_path = r'/content/superAI/train.csv'
-# txt_path = r'/content/superAI/val.csv'
+# txt_path = r'/content/superAI/train.csv'
+txt_path = r'/content/superAI/val.csv'
 # txt_path = r'/content/superAI/test.csv'
-save_path = r'/content/TIPCB/data/BERT_encode/BERT_id_train_64_new.npz'
-# save_path = r'/content/TIPCB/data/BERT_encode/BERT_id_val_64_new.npz'
+# save_path = r'/content/TIPCB/data/BERT_encode/BERT_id_train_64_new.npz'
+save_path = r'/content/TIPCB/data/BERT_encode/BERT_id_val_64_new.npz'
 # save_path = r'/content/TIPCB/data/BERT_encode/BERT_id_test_64_new.npz'
 csv_data = pd.read_csv(txt_path, error_bad_lines=False, header=None)
 dataset = csv_data[2]

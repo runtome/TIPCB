@@ -85,7 +85,7 @@ if __name__=='__main__':
 
     # set gpu ids
     if len(gpu_ids) > 0:
-        torch.cuda.set_device(gpu_ids[0])
+        torch.cuda.set_device('cuda:0')
         cudnn.benchmark = True  # make the training speed faster
     fix_seed(args.seed)
 

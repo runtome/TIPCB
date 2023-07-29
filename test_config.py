@@ -6,10 +6,10 @@ def parse_args():
     # Directory
     #CUHK-PEDES
     parser.add_argument('--dir', type=str,
-                        default=r'/datasets',
+                        default=r'/content/superAI/imgs',
                         help='directory to store dataset')
     parser.add_argument('--dataset', type=str,
-                        default="CUHKPEDES")
+                        default="CUHKPEDES") #default="CUHKPEDES"
 
     #image setting
     parser.add_argument('--width', type=int, default=128)
@@ -27,13 +27,13 @@ def parse_args():
                         default='BERT')
 
     parser.add_argument('--model_path', type=str,
-                        default=r"./log/Experiment01",
+                        default=r"/content/log/Experiment01",
                         help='directory to load checkpoint')
     parser.add_argument('--checkpoint_dir', type=str,
-                        default="./log/Experiment01",
+                        default="/content/log/Experiment01",
                         help='directory to store checkpoint')
     parser.add_argument('--log_test_dir', type=str,
-                        default="./log/Experiment01",
+                        default="/content/log/Experiment01",
                         help='directory to store test')
 
 
